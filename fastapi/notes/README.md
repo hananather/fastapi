@@ -17,85 +17,56 @@ uvicorn app.main:app --reload
 
 OpenAPI docs: http://127.0.0.1:8000/docs
 
-## Concepts Checklist
-
-### 1. Basics
-- ☐ Project layout & settings (Pydantic Settings)
-- ☐ Routing: path, query, body params
-- ☐ Pydantic models & validation
-- ☐ Response models & status codes
-- ☐ Dependency Injection (Depends)
-- ☐ Error handling & custom exceptions
-- ☐ Async best practices (I/O vs CPU)
-- ☐ Testing: pytest + httpx
-
-### 2. Data & Auth
-- ☐ Database setup (SQLModel/SQLAlchemy)
-- ☐ Alembic migrations
-- ☐ CRUD patterns & transactions
-- ☐ Auth: OAuth2 Password Flow + JWT
-- ☐ CORS & rate limiting
-- ☐ Background tasks & job queues
-- ☐ Caching with Redis
-
-### 3. APIs & Realtime
-- ☐ OpenAPI customization (tags, examples, metadata)
-- ☐ API versioning & deprecations
-- ☐ Pagination, filtering, sorting
-- ☐ File uploads & static files
-- ☐ WebSockets & streaming responses (SSE)
-
-### 4. Observability
-- ☐ Structured logging
-- ☐ Metrics (Prometheus/OpenTelemetry)
-- ☐ Tracing (OpenTelemetry)
-- ☐ Health, readiness, liveness probes
-
-### 5. Performance & Security
-- ☐ Performance tuning (uvicorn/gunicorn workers, uvloop)
-- ☐ Concurrency (async DB, connection pooling)
-- ☐ Profiling (CPU, memory)
-- ☐ Security headers (CSP, HSTS), input hardening
-
-### 6. Delivery
-- ☐ Docker image & multi-stage build
-- ☐ Production server (gunicorn + uvicorn workers)
-- ☐ Reverse proxy (Nginx/Caddy) basics
-- ☐ CI/CD (lint, test, build, release)
-
-## Roadmap (Code · Test · Doc)
+## Roadmap (aligned to FastAPI Tutorial)
 
 | Chapter | Topic | Code | Test | Doc |
 |---|---|---|---|---|
-| 1.1 | Routing: path/query/body | ☐ | ☐ | ☐ |
-| 1.2 | Pydantic models & validation | ☐ | ☐ | ☐ |
-| 1.3 | Response models & status | ☐ | ☐ | ☐ |
-| 1.4 | Dependency Injection | ☐ | ☐ | ☐ |
-| 1.5 | Error handling & exceptions | ☐ | ☐ | ☐ |
-| 1.6 | Settings & config | ☐ | ☐ | ☐ |
-| 1.7 | Testing (pytest + httpx) | ☐ | ☐ | ☐ |
-| 2.1 | DB setup (SQLModel/SQLAlchemy) | ☐ | ☐ | ☐ |
-| 2.2 | Alembic migrations | ☐ | ☐ | ☐ |
-| 2.3 | CRUD & transactions | ☐ | ☐ | ☐ |
-| 2.4 | Auth (OAuth2 + JWT) | ☐ | ☐ | ☐ |
-| 2.5 | CORS & rate limiting | ☐ | ☐ | ☐ |
-| 2.6 | Background tasks & queues | ☐ | ☐ | ☐ |
-| 2.7 | Caching (Redis) | ☐ | ☐ | ☐ |
-| 3.1 | OpenAPI customization | ☐ | ☐ | ☐ |
-| 3.2 | API versioning | ☐ | ☐ | ☐ |
-| 3.3 | Pagination & filtering | ☐ | ☐ | ☐ |
-| 3.4 | File uploads & static | ☐ | ☐ | ☐ |
-| 3.5 | WebSockets & streaming | ☐ | ☐ | ☐ |
-| 4.1 | Logging & metrics | ☐ | ☐ | ☐ |
-| 4.2 | Tracing & profiling | ☐ | ☐ | ☐ |
-| 4.3 | Health/readiness/liveness | ☐ | ☐ | ☐ |
-| 5.1 | Performance tuning | ☐ | ☐ | ☐ |
-| 5.2 | Concurrency & pooling | ☐ | ☐ | ☐ |
-| 5.3 | Security hardening | ☐ | ☐ | ☐ |
-| 6.1 | Docker image | ☐ | ☐ | ☐ |
-| 6.2 | Gunicorn + uvicorn workers | ☐ | ☐ | ☐ |
-| 6.3 | Reverse proxy basics | ☐ | ☐ | ☐ |
-| 6.4 | CI/CD pipeline | ☐ | ☐ | ☐ |
+| 1.1 | First Steps | ☐ | ☐ | ☐ |
+| 1.2 | Path Parameters | ☐ | ☐ | ☐ |
+| 1.3 | Query Parameters | ☐ | ☐ | ☐ |
+| 1.4 | Request Body | ☐ | ☐ | ☐ |
+| 1.5 | Query Params & String Validations | ☐ | ☐ | ☐ |
+| 1.6 | Path Params & Numeric Validations | ☐ | ☐ | ☐ |
+| 1.7 | Body – Multiple Parameters | ☐ | ☐ | ☐ |
+| 1.8 | Body – Fields | ☐ | ☐ | ☐ |
+| 1.9 | Body – Nested Models | ☐ | ☐ | ☐ |
+| 1.10 | Body – Updates | ☐ | ☐ | ☐ |
+| 1.11 | Schema Extra Example | ☐ | ☐ | ☐ |
+| 1.12 | Extra Models | ☐ | ☐ | ☐ |
+| 1.13 | Extra Data Types | ☐ | ☐ | ☐ |
+| 1.14 | Cookie Parameters | ☐ | ☐ | ☐ |
+| 1.15 | Header Parameters | ☐ | ☐ | ☐ |
+| 1.16 | Query Param Models | ☐ | ☐ | ☐ |
+| 1.17 | Header Param Models | ☐ | ☐ | ☐ |
+| 1.18 | Cookie Param Models | ☐ | ☐ | ☐ |
+| 1.19 | Request Forms | ☐ | ☐ | ☐ |
+| 1.20 | Request Files | ☐ | ☐ | ☐ |
+| 1.21 | Request Forms and Files | ☐ | ☐ | ☐ |
+| 1.22 | Response Model | ☐ | ☐ | ☐ |
+| 1.23 | Response Status Code | ☐ | ☐ | ☐ |
+| 1.24 | JSON Compatible Encoder | ☐ | ☐ | ☐ |
+| 1.25 | Handling Errors | ☐ | ☐ | ☐ |
+| 1.26 | Path Operation Configuration | ☐ | ☐ | ☐ |
+| 1.27 | Metadata & Docs URLs | ☐ | ☐ | ☐ |
+| 2.1 | Dependencies (Intro) | ☐ | ☐ | ☐ |
+| 2.2 | Classes as Dependencies | ☐ | ☐ | ☐ |
+| 2.3 | Sub-dependencies | ☐ | ☐ | ☐ |
+| 2.4 | Dependencies with yield | ☐ | ☐ | ☐ |
+| 2.5 | Dependencies in Path Operation Decorators | ☐ | ☐ | ☐ |
+| 2.6 | Global Dependencies | ☐ | ☐ | ☐ |
+| 3.1 | Security (Intro) | ☐ | ☐ | ☐ |
+| 3.2 | Security – First Steps | ☐ | ☐ | ☐ |
+| 3.3 | Security – Simple OAuth2 | ☐ | ☐ | ☐ |
+| 3.4 | Security – Get Current User | ☐ | ☐ | ☐ |
+| 3.5 | Security – OAuth2 with JWT | ☐ | ☐ | ☐ |
+| 4.1 | Middleware | ☐ | ☐ | ☐ |
+| 4.2 | CORS | ☐ | ☐ | ☐ |
+| 5.1 | SQL Databases | ☐ | ☐ | ☐ |
+| 5.2 | Bigger Applications – Multiple Files | ☐ | ☐ | ☐ |
+| 5.3 | Background Tasks | ☐ | ☐ | ☐ |
+| 5.4 | Static Files | ☐ | ☐ | ☐ |
+| 5.5 | Testing | ☐ | ☐ | ☐ |
+| 5.6 | Debugging | ☐ | ☐ | ☐ |
 
 ## References
 
