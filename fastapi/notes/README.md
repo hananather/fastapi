@@ -17,6 +17,12 @@ uvicorn app.main:app --reload
 
 OpenAPI docs: http://127.0.0.1:8000/docs
 
+## Notes Index
+
+- 01 — First Steps: 01-first-steps.md
+- 02 — Path Parameters: 02-path-parameters.md
+- 03 — Query Parameters: 03-query-parameters.md
+
 ## Roadmap (aligned to FastAPI Tutorial)
 
 | Chapter | Topic | Code | Test | Doc |
