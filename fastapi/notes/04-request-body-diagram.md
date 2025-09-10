@@ -33,3 +33,41 @@ Notes
 - Invalid data returns a clear 422 error response.
 - Valid data becomes a typed model instance used by your handler.
 
+## Sequence — Validation Path
+
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'background': '#ffffff',
+    'fontFamily': 'Inter, ui-sans-serif, system-ui',
+    'actorBkg': '#E0F2FE',
+    'actorBorder': '#0284C7',
+    'actorTextColor': '#0C4A6E',
+    'sequenceNumberColor': '#ffffff',
+    'messageTextColor': '#111827',
+    'noteBkgColor': '#ffffff',
+    'noteTextColor': '#111827'
+  },
+  'themeCSS': '.sequenceNumber { fill: #ffffff !important; }'
+}}%%
+sequenceDiagram
+  autonumber
+  participant Client
+  participant API as FastAPI Endpoint
+  participant P as Pydantic Model
+
+  rect rgba(255,255,255,1)
+    Client->>API: HTTP POST /resource (JSON body)
+    API->>P: Parse & validate
+    alt valid data
+      P-->>API: Model instance (typed)
+      API->>API: Business logic / DB ops
+      API-->>Client: 200/201 + response body
+    else invalid data
+      P-->>API: Validation errors
+      API-->>Client: 422 Unprocessable Entity
+    end
+  end
+```
+
