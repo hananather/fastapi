@@ -68,3 +68,41 @@ In a simple chat application built with FastAPI, **query parameters** are useful
 
 - **Pagination:**
   Use `skip` and `limit` query parameters (as shown in FastAPI docs) to allow the client to page through messages.
+
+---
+
+In FastAPI there are **two main types of parameters** used in routes:
+
+1. **Path Parameters**
+   - These are parts of the URL path itself.
+   - Defined directly in the route, e.g. `/items/{item_id}`.
+   - Used to uniquely identify a resource.
+   - Example:
+     ```python
+     @app.get("/items/{item_id}")
+     def read_item(item_id: int):
+         return {"item_id": item_id}
+     ```
+
+2. **Query Parameters**
+   - These come after the `?` in the URL.
+   - Used for filtering, searching, or optional criteria.
+   - Defined as function arguments that are not part of the path.
+   - Example:
+     ```python
+     @app.get("/items/")
+     def read_items(q: str = None):
+         return {"q": q}
+     ```
+   - Called like: `/items/?q=foo`
+
+**Summary Table:**
+
+| Type            | Example URL                | Purpose                                | FastAPI Syntax      |
+|-----------------|---------------------------|----------------------------------------|---------------------|
+| Path Parameter  | `/items/123`              | Identify a specific resource           | `/items/{item_id}`  |
+| Query Parameter | `/items/?q=foo&page=2`    | Filter, search, or refine the request  | `q: str = None`     |
+
+
+- **Path** parameters: part of the route.
+- **Query** parameters: used for filtering or optional arguments.
